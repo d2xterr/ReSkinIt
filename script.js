@@ -1,8 +1,8 @@
-const DISCORD_USER_ID = '1106915426396540938';
+const DISCORD_USER_ID = '1106915426396540938'; // DISCORD ID REPLACE TO GET UR DISCORD INFO
 const LANYARD_REST = `https://api.lanyard.rest/v1/users/${DISCORD_USER_ID}`;
 const LANYARD_WS = 'wss://api.lanyard.rest/socket';
 
-// DOM Elements
+
 const video = document.getElementById('bgVideo');
 const playToggle = document.getElementById('playToggle');
 const muteToggle = document.getElementById('muteToggle');
@@ -326,3 +326,4 @@ function connectLanyardWebSocket() {
 fetchInitialData();
 
 connectLanyardWebSocket();
+
