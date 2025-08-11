@@ -2,7 +2,9 @@
 
 A sleek, modern landing page that displays real-time Discord presence information using the Lanyard API. Features a cinematic background video with interactive controls and live activity tracking.
 
-![Preview]([https://img.shields.io/badge/Status-Live-success](https://media.discordapp.net/attachments/1383942446421119030/1404351451538657320/image.png?ex=689adfb5&is=68998e35&hm=47f2a666b2d98b0c6f16b78a95a156af7482defc9eedbd3022216270197ef01a&=&format=webp&quality=lossless&width=1032&height=533))
+# Preview 
+<img width="1916" height="993" alt="image" src="https://github.com/user-attachments/assets/84a6e6de-4566-476a-bb92-da07e8210713" />
+
 
 ## ✨ Features
 
