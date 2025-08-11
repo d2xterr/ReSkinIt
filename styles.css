@@ -1,0 +1,204 @@
+:root {
+  --accent: #ff3b2e;
+  --muted: rgba(255,255,255,0.8);
+  --online: #23a55a;
+  --idle: #f0b132;
+  --dnd: #f23f43;
+  --offline: #80848e;
+}
+
+* { box-sizing: border-box }
+html,body { height: 100%; margin: 0; font-family: Inter, system-ui, Segoe UI, Roboto, Arial }
+
+/* Background Video */
+.bg-video {
+  position: fixed; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; z-index: 0;
+}
+
+/* Enter Site Overlay */
+.enter-overlay {
+  position: fixed; inset: 0; z-index: 10;
+  background: rgba(0,0,0,0.9);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.enter-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.enter-text {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* Main Content */
+.overlay {
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  height: 100vh; padding: 24px;
+}
+
+.center-card { 
+  width: 980px; max-width: 96%; 
+  text-align: center; color: var(--muted) 
+}
+
+/* Avatar Section */
+.avatar-wrap {
+  width: 120px; height: 120px;
+  border-radius: 999px; overflow: hidden;
+  margin: 0 auto; box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+  position: relative;
+}
+
+.avatar { 
+  width: 100%; height: 100%; 
+  object-fit: cover 
+}
+
+/* Status Indicators */
+.status-indicator {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px solid rgba(0,0,0,0.8);
+  background: var(--offline);
+}
+
+.status-indicator.online { background: var(--online); }
+.status-indicator.idle { background: var(--idle); }
+.status-indicator.dnd { background: var(--dnd); }
+.status-indicator.offline { background: var(--offline); }
+
+.display-name { 
+  margin-top: 12px; font-size: 28px; 
+  color: var(--accent); font-weight: 700 
+}
+
+/* Presence Card */
+.presence-card {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(0,0,0,0.55); backdrop-filter: blur(6px);
+  padding: 10px 14px; border-radius: 12px;
+  width: 420px; margin: 12px auto;
+}
+
+/* Activity Image */
+.activity-image-wrap {
+  width: 48px; height: 48px;
+  border-radius: 8px; overflow: hidden;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(2px);
+  border: 2px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+.activity-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.presence-meta { 
+  flex: 1; text-align: left 
+}
+
+.activity-line { 
+  font-weight: 600 
+}
+
+.status-line { 
+  font-size: 13px; 
+  color: rgba(255,255,255,0.6) 
+}
+
+.lanyard-badge {
+  background: linear-gradient(90deg,#ffd36b,#ff7b7b);
+  padding: 8px; border-radius: 8px; font-weight: 700;
+}
+
+/* Controls */
+.cta-row { 
+  display: flex; gap: 10px; 
+  justify-content: center; margin-top: 14px 
+}
+
+.btn {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 8px 14px; border-radius: 10px;
+  color: var(--muted); cursor: pointer;
+}
+
+/* Text Content */
+.big-text { 
+  margin-top: 34px 
+}
+
+.line-1 { 
+  font-size: 32px; letter-spacing: 2px; 
+  color: rgba(255,255,255,0.9) 
+}
+
+.line-2 { 
+  font-size: 56px; letter-spacing: 2px; 
+  color: var(--accent); font-weight: 800 
+}
+
+/* Social Icons */
+.icons-row { 
+  display: flex; gap: 12px; 
+  justify-content: center; margin-top: 20px 
+}
+
+.icon {
+  padding: 8px 12px; border-radius: 8px;
+  background: rgba(0,0,0,0.5);
+  text-decoration: none; color: var(--muted);
+}
+
+/* Mobile Responsive */
+@media (max-width:640px) {
+  .avatar-wrap { 
+    width: 88px; height: 88px 
+  }
+  
+  .status-indicator {
+    width: 24px; height: 24px;
+    bottom: 4px; right: 4px;
+    border-width: 3px;
+  }
+  
+  .display-name { 
+    font-size: 20px 
+  }
+  
+  .line-2 { 
+    font-size: 32px 
+  }
+  
+  .presence-card { 
+    width: 92% 
+  }
+  
+  .enter-text { 
+    font-size: 24px; 
+  }
+}

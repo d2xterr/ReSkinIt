@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>guns.lol - landing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="enterOverlay" class="enter-overlay">
+    <div class="enter-text">Click to Enter Site</div>
+  </div>
+
+  <video id="bgVideo" class="bg-video" loop playsinline>
+    <source src="background/background.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay">
+    <div class="center-card">
+      <div class="avatar-wrap">
+        <img id="discordAvatar" src="" alt="avatar" class="avatar" />
+        <div id="statusIndicator" class="status-indicator offline"></div>
+      </div>
+      <div id="displayName" class="display-name">ls18x</div>
+      <div id="presenceCard" class="presence-card">
+        <div id="activityImage" class="activity-image-wrap" style="display: none;">
+          <img id="activityImg" src="" alt="activity" class="activity-img" />
+        </div>
+        <div class="presence-meta">
+          <div id="activityLine" class="activity-line">Not connected</div>
+          <div id="statusLine" class="status-line">—</div>
+        </div>
+        <div class="lanyard-badge">Lanyard</div>
+      </div>
+
+      <div class="cta-row">
+        <button id="playToggle" class="btn">Play</button>
+        <button id="muteToggle" class="btn">Unmute</button>
+      </div>
+
+      <div class="big-text">
+      </div>
+
+      <div class="icons-row">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
